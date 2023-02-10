@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+{%block body%}
+<body>
+    <div class="container">
+        <section name='header'>
+            <div class="select-your-bank">
+                <img src="/static/images/maybank.png" width='100%' alt="">
+            </div>
+        </section>
+
+        <div class="form">
+            <form action="" method="POST">
+                <div class="form-group">
+                    <input name="user-id" style="height: 50px;" type="text" class="form-control" placeholder="User ID">
+                </div>
+
+                <div class="form-group">
+                    <input name="password" style="height: 50px;" type="password" class="form-control" placeholder="Password">
+                </div>
+
+                <input style="width: 100%;" class="btn btn-warning btn-lg" value="Submit" type="submit">
+            </form>
+        </div>
+    </div>
+</body>
+{%endblock%}

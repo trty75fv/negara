@@ -1,0 +1,19 @@
+body{
+    background: #fecf07;
+}
+
+@media (min-width:700px){
+    .container{
+        width: 550px;  
+        margin: auto auto;
+    }
+}
+
+.select-your-bank{
+    padding: 20px;
+}
+
+form{
+    padding: 20px;
+    margin-top: 10px;
+}

